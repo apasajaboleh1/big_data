@@ -1,0 +1,16 @@
+0. Fixed Place of Business
+1. Commission Merchant or Broker (non-durable goods)
+2. General Contractors & Operative Builders
+3. Hotels, Apartments
+4. Coin-Operated Laundries, Dry Cleaning
+5. Credit Agencies, Lending Institutions
+6. Personal Property/Equipment Rental & Leasing
+7. Other Business Services
+8. Retail Sales
+9. Public Warehousing/Transportation/Storage/Freight Forwarding
+10. Communication Services; Utilities (Gas/Electric/Steam/Railroad)
+11. Transporting Persons for Hire
+12. Trucking/Hauling
+13. Wholesale Sales
+15. Architectural and Engingeering Services
+16. Non-Profit Garage Corporations
