@@ -51,10 +51,7 @@ def mapTut():
         lat,lon = a[0],a[1]
         x,y = m(lon,lat)    
         m.plot(x,y, 'ro')
-    for b in hasil_cluster :
-        lat,lon = b[0],b[1]
-        x,y = m(lon,lat)    
-        m.plot(x,y, 'go')    
+       
     
     plt.title("Geo Plotting")
     plt.show()
