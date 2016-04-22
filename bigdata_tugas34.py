@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 conf = SparkConf().setMaster("local").setAppName("tugasbigdata")
 sc = SparkContext(conf = conf)
 count=0
+hasil_cluster=[]
 hasil_data_smua=[]
 def parseLine(line):
     fields = line.split(',')
@@ -36,8 +37,8 @@ def parseLine(line):
 
 def mapTut():
 
-    m = Basemap(projection='mill',llcrnrlat=20,urcrnrlat=50,\
-                llcrnrlon=-125,urcrnrlon=-120,resolution='c')
+    m = Basemap(projection='mill',llcrnrlat=37,urcrnrlat=37.9,\
+                llcrnrlon=-122.7,urcrnrlon=-122.1,resolution='c')
     m.drawcoastlines()
     m.drawcountries()
     m.drawstates()
@@ -45,13 +46,15 @@ def mapTut():
     m.drawmapboundary(fill_color='#FFFFFF')
 
 
-    # Houston, Texas
-
+    
     for a in hasil_data_smua:
         lat,lon = a[0],a[1]
         x,y = m(lon,lat)    
         m.plot(x,y, 'ro')
-    
+    for b in hasil_cluster :
+        lat,lon = b[0],b[1]
+        x,y = m(lon,lat)    
+        m.plot(x,y, 'go')    
     
     plt.title("Geo Plotting")
     plt.show()
@@ -75,7 +78,7 @@ clusters = KMeans.train(data, K,maxIterations=200000,runs=20, initializationMode
 
 print clusters.clusterCenters
 for temp12 in clusters.clusterCenters :
-    hasil_data_smua.append(temp12)
+    hasil_cluster.append(temp12)
 def error(point):
  center = clusters.centers[clusters.predict(point)]
  return sqrt(sum([x**2 for x in (point - center)]))
