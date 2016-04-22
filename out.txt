@@ -1,2 +1,15 @@
-[array([  37.75508073, -122.46554262]), array([  37.77680463, -122.41269527])]
-Within Set Sum of Squared Error = 2511.93034439
+jenis_bisnis :  Transporting Persons for Hire jumlah_stan: 2795
+jenis_bisnis :  Trucking/Hauling jumlah_stan: 158
+jenis_bisnis :  Hotels, Apartments jumlah_stan: 9341
+jenis_bisnis :  General Contractors & Operative Builders jumlah_stan: 4331
+jenis_bisnis :  Credit Agencies, Lending Institutions jumlah_stan: 49
+jenis_bisnis :  Other Business Services jumlah_stan: 56909
+jenis_bisnis :  Public Warehousing/Transportation/Storage/Freight Forwarding jumlah_stan: 138
+jenis_bisnis :  Commission Merchant or Broker (non-durable goods) jumlah_stan: 2765
+jenis_bisnis :  Communication Services; Utilities (Gas/Electric/Steam/Railroad) jumlah_stan: 185
+jenis_bisnis :  Architectural and Engingeering Services jumlah_stan: 1171
+jenis_bisnis :  Non-Profit Garage Corporations jumlah_stan: 3
+jenis_bisnis :  Retail Sales jumlah_stan: 17990
+jenis_bisnis :  Wholesale Sales jumlah_stan: 3464
+jenis_bisnis :  Coin-Operated Laundries, Dry Cleaning jumlah_stan: 657
+jenis_bisnis :  Personal Property/Equipment Rental & Leasing jumlah_stan: 285
