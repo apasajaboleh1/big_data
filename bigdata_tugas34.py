@@ -51,7 +51,11 @@ def mapTut():
         lat,lon = a[0],a[1]
         x,y = m(lon,lat)    
         m.plot(x,y, 'ro')
-       
+    
+    for b in hasil_cluster :
+        lat,lon = b[0],b[1]
+        x,y = m(lon,lat)    
+        m.plot(x,y, 'go')
     
     plt.title("Geo Plotting")
     plt.show()
@@ -71,7 +75,7 @@ for res_data in point_data :
 
 #cara 2
 K=2
-clusters = KMeans.train(data, K,maxIterations=200000,runs=20, initializationMode="random", epsilon=1e-8)
+clusters = KMeans.train(data, K,maxIterations=100,runs=20, initializationMode="random",seed=20,epsilon=1e-8)
 
 print clusters.clusterCenters
 for temp12 in clusters.clusterCenters :
