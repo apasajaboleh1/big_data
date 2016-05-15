@@ -13,12 +13,11 @@ conf = SparkConf().setMaster("local").setAppName("SparkTFIDF")
 sc = SparkContext(conf = conf)
 
 # Load documents (one per line).
-rawData = sc.textFile("tugas4.txt") # ini untuk nama filenya tolong ganti aja kalau g butuh.... 
+rawData = sc.textFile("tugas4.txt")
 fields = rawData.map(lambda x: x.split("\t"))
 documents = fields.map(lambda x: x[2].lower().split(" "))
 
 documentNames = fields.map(lambda x: x[0])
-
 
 hashingTF = HashingTF(100000)  #100K hash buckets just to save some memory
 tf = hashingTF.transform(documents)
