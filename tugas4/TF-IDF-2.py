@@ -34,10 +34,12 @@ keywordHashValue = int(keywordTF.indices[0])
 
 keywordRelevance = tfidf.map(lambda x: x[keywordHashValue])
 
-zippedResults = keywordRelevance.zip(documentNames)
-
+zippedResults = keywordRelevance.zip(documentNames).filter(lambda x : x[0]>0.0)
+badak=zippedResults.collect()
 print "Best id document for keywords is:"
-if zippedResults.max()[0]==0.0:
+if len(badak) == 0 :
     print "no data"
-else :
-    print zippedResults.max()[1] # print result id document that containt the word
+else:
+    for a in badak :
+        print a[1]
+#print len(badak)
