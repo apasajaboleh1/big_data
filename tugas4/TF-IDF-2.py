@@ -37,4 +37,7 @@ keywordRelevance = tfidf.map(lambda x: x[keywordHashValue])
 zippedResults = keywordRelevance.zip(documentNames)
 
 print "Best id document for keywords is:"
-print zippedResults.max()[1] # print result id document that containt the word
+if zippedResults.max()[0]==0.0:
+    print "no data"
+else :
+    print zippedResults.max()[1] # print result id document that containt the word
