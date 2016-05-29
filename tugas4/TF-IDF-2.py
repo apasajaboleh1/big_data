@@ -19,7 +19,7 @@ documents = fields.map(lambda x: x[2].lower().split(" "))
 
 documentNames = fields.map(lambda x: x[0])
 
-hashingTF = HashingTF(100000)  #100K hash buckets just to save some memory
+hashingTF = HashingTF(100000000)  #100K hash buckets just to save some memory
 tf = hashingTF.transform(documents)
 
 idf = IDF(minDocFreq=1).fit(tf) # ini minDocFreq untuk menentukan berapa jumlah document yang harus ada kata tersebut
