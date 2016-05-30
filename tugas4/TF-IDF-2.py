@@ -13,7 +13,7 @@ conf = SparkConf().setMaster("local").setAppName("SparkTFIDF")
 sc = SparkContext(conf = conf)
 
 # Load documents (one per line).
-rawData = sc.textFile("tugas4.txt")
+rawData = sc.textFile("big_data/tugas4/tugas4.txt")
 fields = rawData.map(lambda x: x.split("\t"))
 documents = fields.map(lambda x: x[2].lower().split(" "))
 
